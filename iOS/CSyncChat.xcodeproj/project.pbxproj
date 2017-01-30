@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36678B6A1DD37F1D00A6B627 /* CSyncDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36678B691DD37F1D00A6B627 /* CSyncDataManager.swift */; };
+		36678B6C1DD3811700A6B627 /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36678B6B1DD3811700A6B627 /* RoomListViewModel.swift */; };
+		36AF12A61DD52BFB00F302B2 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF12A51DD52BFB00F302B2 /* RoomViewModel.swift */; };
+		36AF5E4B1DDF74720082C1D6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36AF5E4A1DDF74720082C1D6 /* Config.plist */; };
+		CA36E6611CB71B40005690DA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA36E6601CB71B40005690DA /* SafariServices.framework */; };
+		CA36E6631CB7CF2D005690DA /* EditRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA36E6621CB7CF2D005690DA /* EditRoomViewController.swift */; };
+		CA55367F1C76B68900539EDB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55367E1C76B68900539EDB /* Message.swift */; };
+		CA6024F91CD8F15000303C8B /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6024F81CD8F15000303C8B /* SectionHeader.xib */; };
+		CAD851821C5855400075F506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD851811C5855400075F506 /* AppDelegate.swift */; };
+		CAD851841C5855400075F506 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD851831C5855400075F506 /* RoomListViewController.swift */; };
+		CAD851861C5855400075F506 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD851851C5855400075F506 /* ChatViewController.swift */; };
+		CAD851891C5855400075F506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD851871C5855400075F506 /* Main.storyboard */; };
+		CAD8518B1C5855400075F506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD8518A1C5855400075F506 /* Assets.xcassets */; };
+		CAD8518E1C5855400075F506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD8518C1C5855400075F506 /* LaunchScreen.storyboard */; };
+		CAD851991C5855400075F506 /* CSyncChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD851981C5855400075F506 /* CSyncChatTests.swift */; };
+		CAD851A41C5855400075F506 /* CSyncChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD851A31C5855400075F506 /* CSyncChatUITests.swift */; };
+		CAD851B31C585E130075F506 /* CSyncSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD851B11C585DAA0075F506 /* CSyncSDK.framework */; };
+		CAE133281C7802C100DFFA0C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE133271C7802C100DFFA0C /* Room.swift */; };
+		CAE1332E1C7A662500DFFA0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1332D1C7A662500DFFA0C /* LoginViewController.swift */; };
+		CAE133341C7A6CC400DFFA0C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE133331C7A6CC400DFFA0C /* AddressBook.framework */; };
+		CAE133381C7A6CF800DFFA0C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE133371C7A6CF800DFFA0C /* SystemConfiguration.framework */; };
+		CAE133411C7AA59300DFFA0C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE133401C7AA59300DFFA0C /* libz.tbd */; };
+		CAF293831C87AD8500B6F9C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF293821C87AD8500B6F9C1 /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAD851951C5855400075F506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAD851761C58553F0075F506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD8517D1C5855400075F506;
+			remoteInfo = CSyncChat;
+		};
+		CAD851A01C5855400075F506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAD851761C58553F0075F506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD8517D1C5855400075F506;
+			remoteInfo = CSyncChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36678B691DD37F1D00A6B627 /* CSyncDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSyncDataManager.swift; sourceTree = "<group>"; };
+		36678B6B1DD3811700A6B627 /* RoomListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
+		36AF12A51DD52BFB00F302B2 /* RoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		36AF5E4A1DDF74720082C1D6 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		36BF51B51DD23F8100CD307E /* CSyncChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CSyncChat.entitlements; sourceTree = "<group>"; };
+		CA36E6601CB71B40005690DA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		CA36E6621CB7CF2D005690DA /* EditRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRoomViewController.swift; sourceTree = "<group>"; };
+		CA55367E1C76B68900539EDB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CA6024F81CD8F15000303C8B /* SectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
+		CAD8517E1C5855400075F506 /* CSyncChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSyncChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD851811C5855400075F506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAD851831C5855400075F506 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		CAD851851C5855400075F506 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CAD851881C5855400075F506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAD8518A1C5855400075F506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAD8518D1C5855400075F506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAD8518F1C5855400075F506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD851941C5855400075F506 /* CSyncChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSyncChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD851981C5855400075F506 /* CSyncChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSyncChatTests.swift; sourceTree = "<group>"; };
+		CAD8519A1C5855400075F506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD8519F1C5855400075F506 /* CSyncChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSyncChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD851A31C5855400075F506 /* CSyncChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSyncChatUITests.swift; sourceTree = "<group>"; };
+		CAD851A51C5855400075F506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD851B11C585DAA0075F506 /* CSyncSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSyncSDK.framework; path = Carthage/Build/iOS/CSyncSDK.framework; sourceTree = SOURCE_ROOT; };
+		CAE133271C7802C100DFFA0C /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		CAE1332D1C7A662500DFFA0C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CAE133331C7A6CC400DFFA0C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CAE133351C7A6CD600DFFA0C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CAE133371C7A6CF800DFFA0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CAE133401C7AA59300DFFA0C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CAF293821C87AD8500B6F9C1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAD8517B1C5855400075F506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD851B31C585E130075F506 /* CSyncSDK.framework in Frameworks */,
+				CAE133341C7A6CC400DFFA0C /* AddressBook.framework in Frameworks */,
+				CA36E6611CB71B40005690DA /* SafariServices.framework in Frameworks */,
+				CAE133381C7A6CF800DFFA0C /* SystemConfiguration.framework in Frameworks */,
+				CAE133411C7AA59300DFFA0C /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD851911C5855400075F506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD8519C1C5855400075F506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36BF51B11DD2317B00CD307E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAE1332D1C7A662500DFFA0C /* LoginViewController.swift */,
+				CAD851831C5855400075F506 /* RoomListViewController.swift */,
+				CAD851851C5855400075F506 /* ChatViewController.swift */,
+				CA36E6621CB7CF2D005690DA /* EditRoomViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		36BF51B21DD2318700CD307E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				36678B6B1DD3811700A6B627 /* RoomListViewModel.swift */,
+				36AF12A51DD52BFB00F302B2 /* RoomViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		36BF51B31DD2319600CD307E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD8518C1C5855400075F506 /* LaunchScreen.storyboard */,
+				CAD851871C5855400075F506 /* Main.storyboard */,
+				CA6024F81CD8F15000303C8B /* SectionHeader.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		36BF51B41DD231EB00CD307E /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				36678B691DD37F1D00A6B627 /* CSyncDataManager.swift */,
+			);
+			name = DataManagers;
+			sourceTree = "<group>";
+		};
+		CA55367B1C762CCF00539EDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA36E6601CB71B40005690DA /* SafariServices.framework */,
+				CAD851B11C585DAA0075F506 /* CSyncSDK.framework */,
+				CAE133331C7A6CC400DFFA0C /* AddressBook.framework */,
+				CAE133351C7A6CD600DFFA0C /* StoreKit.framework */,
+				CAE133371C7A6CF800DFFA0C /* SystemConfiguration.framework */,
+				CAE133401C7AA59300DFFA0C /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAD851751C58553F0075F506 = {
+			isa = PBXGroup;
+			children = (
+				CAD851801C5855400075F506 /* CSyncChat */,
+				CAD851971C5855400075F506 /* CSyncChatTests */,
+				CAD851A21C5855400075F506 /* CSyncChatUITests */,
+				CA55367B1C762CCF00539EDB /* Frameworks */,
+				CAD8517F1C5855400075F506 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAD8517F1C5855400075F506 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAD8517E1C5855400075F506 /* CSyncChat.app */,
+				CAD851941C5855400075F506 /* CSyncChatTests.xctest */,
+				CAD8519F1C5855400075F506 /* CSyncChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAD851801C5855400075F506 /* CSyncChat */ = {
+			isa = PBXGroup;
+			children = (
+				36BF51B41DD231EB00CD307E /* DataManagers */,
+				CAE1332A1C78030000DFFA0C /* Models */,
+				CAE133291C7802E100DFFA0C /* Supporting Files */,
+				36BF51B31DD2319600CD307E /* Views */,
+				36BF51B11DD2317B00CD307E /* ViewControllers */,
+				36BF51B21DD2318700CD307E /* ViewModels */,
+			);
+			path = CSyncChat;
+			sourceTree = "<group>";
+		};
+		CAD851971C5855400075F506 /* CSyncChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAD851981C5855400075F506 /* CSyncChatTests.swift */,
+				CAD8519A1C5855400075F506 /* Info.plist */,
+			);
+			path = CSyncChatTests;
+			sourceTree = "<group>";
+		};
+		CAD851A21C5855400075F506 /* CSyncChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAD851A31C5855400075F506 /* CSyncChatUITests.swift */,
+				CAD851A51C5855400075F506 /* Info.plist */,
+			);
+			path = CSyncChatUITests;
+			sourceTree = "<group>";
+		};
+		CAE133291C7802E100DFFA0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36BF51B51DD23F8100CD307E /* CSyncChat.entitlements */,
+				CAD851811C5855400075F506 /* AppDelegate.swift */,
+				CAD8518A1C5855400075F506 /* Assets.xcassets */,
+				CAD8518F1C5855400075F506 /* Info.plist */,
+				36AF5E4A1DDF74720082C1D6 /* Config.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAE1332A1C78030000DFFA0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAE133271C7802C100DFFA0C /* Room.swift */,
+				CA55367E1C76B68900539EDB /* Message.swift */,
+				CAF293821C87AD8500B6F9C1 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAD8517D1C5855400075F506 /* CSyncChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD851A81C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChat" */;
+			buildPhases = (
+				CAD8517A1C5855400075F506 /* Sources */,
+				CAD8517B1C5855400075F506 /* Frameworks */,
+				CAD8517C1C5855400075F506 /* Resources */,
+				CAD851B41C585E250075F506 /* Copy  Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSyncChat;
+			productName = CSyncChat;
+			productReference = CAD8517E1C5855400075F506 /* CSyncChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAD851931C5855400075F506 /* CSyncChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD851AB1C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChatTests" */;
+			buildPhases = (
+				CAD851901C5855400075F506 /* Sources */,
+				CAD851911C5855400075F506 /* Frameworks */,
+				CAD851921C5855400075F506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD851961C5855400075F506 /* PBXTargetDependency */,
+			);
+			name = CSyncChatTests;
+			productName = CSyncChatTests;
+			productReference = CAD851941C5855400075F506 /* CSyncChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAD8519E1C5855400075F506 /* CSyncChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD851AE1C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChatUITests" */;
+			buildPhases = (
+				CAD8519B1C5855400075F506 /* Sources */,
+				CAD8519C1C5855400075F506 /* Frameworks */,
+				CAD8519D1C5855400075F506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD851A11C5855400075F506 /* PBXTargetDependency */,
+			);
+			name = CSyncChatUITests;
+			productName = CSyncChatUITests;
+			productReference = CAD8519F1C5855400075F506 /* CSyncChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAD851761C58553F0075F506 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mike Kistler";
+				TargetAttributes = {
+					CAD8517D1C5855400075F506 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					CAD851931C5855400075F506 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						TestTargetID = CAD8517D1C5855400075F506;
+					};
+					CAD8519E1C5855400075F506 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						TestTargetID = CAD8517D1C5855400075F506;
+					};
+				};
+			};
+			buildConfigurationList = CAD851791C58553F0075F506 /* Build configuration list for PBXProject "CSyncChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAD851751C58553F0075F506;
+			productRefGroup = CAD8517F1C5855400075F506 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAD8517D1C5855400075F506 /* CSyncChat */,
+				CAD851931C5855400075F506 /* CSyncChatTests */,
+				CAD8519E1C5855400075F506 /* CSyncChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAD8517C1C5855400075F506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36AF5E4B1DDF74720082C1D6 /* Config.plist in Resources */,
+				CAD8518E1C5855400075F506 /* LaunchScreen.storyboard in Resources */,
+				CAD8518B1C5855400075F506 /* Assets.xcassets in Resources */,
+				CA6024F91CD8F15000303C8B /* SectionHeader.xib in Resources */,
+				CAD851891C5855400075F506 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD851921C5855400075F506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD8519D1C5855400075F506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAD851B41C585E250075F506 /* Copy  Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CSyncSDK.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
+			);
+			name = "Copy  Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAD8517A1C5855400075F506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD851861C5855400075F506 /* ChatViewController.swift in Sources */,
+				CA55367F1C76B68900539EDB /* Message.swift in Sources */,
+				CAD851841C5855400075F506 /* RoomListViewController.swift in Sources */,
+				CAD851821C5855400075F506 /* AppDelegate.swift in Sources */,
+				CAE1332E1C7A662500DFFA0C /* LoginViewController.swift in Sources */,
+				CAE133281C7802C100DFFA0C /* Room.swift in Sources */,
+				36678B6A1DD37F1D00A6B627 /* CSyncDataManager.swift in Sources */,
+				36678B6C1DD3811700A6B627 /* RoomListViewModel.swift in Sources */,
+				CA36E6631CB7CF2D005690DA /* EditRoomViewController.swift in Sources */,
+				36AF12A61DD52BFB00F302B2 /* RoomViewModel.swift in Sources */,
+				CAF293831C87AD8500B6F9C1 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD851901C5855400075F506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD851991C5855400075F506 /* CSyncChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD8519B1C5855400075F506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD851A41C5855400075F506 /* CSyncChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAD851961C5855400075F506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAD8517D1C5855400075F506 /* CSyncChat */;
+			targetProxy = CAD851951C5855400075F506 /* PBXContainerItemProxy */;
+		};
+		CAD851A11C5855400075F506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAD8517D1C5855400075F506 /* CSyncChat */;
+			targetProxy = CAD851A01C5855400075F506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAD851871C5855400075F506 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD851881C5855400075F506 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAD8518C1C5855400075F506 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD8518D1C5855400075F506 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAD851A61C5855400075F506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAD851A71C5855400075F506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAD851A91C5855400075F506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CSyncChat/CSyncChat.entitlements;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CSyncChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CAD851AA1C5855400075F506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CSyncChat/CSyncChat.entitlements;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CSyncChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CAD851AC1C5855400075F506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CSyncChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSyncChat.app/CSyncChat";
+			};
+			name = Debug;
+		};
+		CAD851AD1C5855400075F506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CSyncChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSyncChat.app/CSyncChat";
+			};
+			name = Release;
+		};
+		CAD851AF1C5855400075F506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = CSyncChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CSyncChat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CAD851B01C5855400075F506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = CSyncChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.CSyncChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CSyncChat;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAD851791C58553F0075F506 /* Build configuration list for PBXProject "CSyncChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD851A61C5855400075F506 /* Debug */,
+				CAD851A71C5855400075F506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD851A81C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD851A91C5855400075F506 /* Debug */,
+				CAD851AA1C5855400075F506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD851AB1C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD851AC1C5855400075F506 /* Debug */,
+				CAD851AD1C5855400075F506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD851AE1C5855400075F506 /* Build configuration list for PBXNativeTarget "CSyncChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD851AF1C5855400075F506 /* Debug */,
+				CAD851B01C5855400075F506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAD851761C58553F0075F506 /* Project object */;
+}

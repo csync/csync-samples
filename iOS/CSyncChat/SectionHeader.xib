@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionHeader" customModule="CSyncChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44n-cC-jm9">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-lT-zAk" userLabel="addButton">
+                            <frame key="frameInset" minX="340" minY="8" width="21" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="AddButton"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-f7-cJa" userLabel="title">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.70980392160000005" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="fOW-f7-cJa" firstAttribute="top" secondItem="44n-cC-jm9" secondAttribute="top" constant="8" id="51K-9C-fkz"/>
+                        <constraint firstAttribute="bottom" secondItem="fOW-f7-cJa" secondAttribute="bottom" constant="7" id="bOZ-lo-m7D"/>
+                        <constraint firstItem="fOW-f7-cJa" firstAttribute="leading" secondItem="44n-cC-jm9" secondAttribute="leading" constant="8" id="yPT-ck-2cU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" header="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="44n-cC-jm9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N2B-LF-kB4"/>
+                <constraint firstAttribute="trailing" secondItem="44n-cC-jm9" secondAttribute="trailing" id="arE-O0-sNf"/>
+                <constraint firstItem="44n-cC-jm9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mfc-1r-3kt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="wl8-lT-zAk" id="bDY-l0-Hzq"/>
+                <outlet property="title" destination="fOW-f7-cJa" id="dWA-8C-shy"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="228"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AddButton" width="21" height="21"/>
+    </resources>
+</document>
