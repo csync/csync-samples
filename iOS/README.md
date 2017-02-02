@@ -6,7 +6,7 @@ available in [LICENSE](LICENSE).
 
 ## Getting Started
 1. Use [Carthage](https://github.com/Carthage/Carthage) to run 'carthage update'
-2. Setup the [Csync Server Database](https://github.ibm.com/csync/csync-server)
+2. Setup the [Csync Server Database](https://github.com/csync/csync-server)
 3. Edit Config.plist to point to your CSync Database Instance
 
 ## Dependencies
