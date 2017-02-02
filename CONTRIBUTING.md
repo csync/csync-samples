@@ -2,7 +2,7 @@
 
 1. If one does not exist already, open an issue that your contribution is going to resolve or fix.
     1. Make sure to give the issue a clear title and a very focused description.
-    2. Mark your issue with the appropriate label (Example:`android`, `iOS`) to indicate which platform you are contributing to. 
+    2. Mark your issue with the appropriate label (Example:`android`, `iOS`) to indicate which demo application you are contributing to. 
 2. On the issue page, set the appropriate Pipeline, Label(s), Milestone, and assign the issue to
 yourself.
     1. We use Zenhub to organize our issues and plan our releases. Giving as much information as to
