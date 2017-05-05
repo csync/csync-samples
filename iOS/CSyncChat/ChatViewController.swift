@@ -28,6 +28,7 @@ class ChatViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var messageEntry: UITextField!
+    @IBOutlet weak var messageEntryBottomConstraint: NSLayoutConstraint!
 	var roomViewModel : RoomViewModel!
 	var shouldGoBack = false
 
@@ -63,6 +64,9 @@ class ChatViewController: UIViewController {
 			} as ((Room, Bool) -> ())
 		//initialize the view model
 		roomViewModel = RoomViewModel.init(forRoom: room, withMessageCompletionHandler: messageCompletionHandler, withRoomCompletionHandler: roomCompletionHandler)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -111,6 +115,24 @@ class ChatViewController: UIViewController {
 			}
 		}
 	}
+    
+    func keyboardWillShow(notification: Notification) {
+        guard let keyboardInfo = notification.userInfo,
+        let keyboardSize = (keyboardInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+        let animationDuration = keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber,
+        let animationCurve = keyboardInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber else {return}
+        let keyboardHeight = keyboardSize.height
+        
+        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0, options: UIViewAnimationOptions(rawValue: animationCurve.uintValue << 16), animations: {self.messageEntryBottomConstraint.constant = keyboardHeight} , completion: nil)
+    }
+    
+    func keyboardWillHide(notification: Notification) {
+        guard let keyboardInfo = notification.userInfo,
+            let animationDuration = keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber,
+            let animationCurve = keyboardInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber else {return}
+        
+        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0, options: UIViewAnimationOptions(rawValue: animationCurve.uintValue << 16), animations: {self.messageEntryBottomConstraint.constant = 0} , completion: nil)
+    }
 }
 extension ChatViewController : UITextFieldDelegate{
 	// MARK: - UITextFieldDelegate methods
