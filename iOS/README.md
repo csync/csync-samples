@@ -12,4 +12,4 @@ available in [LICENSE](LICENSE).
 ## Dependencies
 | Name | URL |License Type | Version | Need/Reason | Release Date | Verification Code |
 |------|-----|-------------|---------|-------------|--------------|-------------------|
-| Csync-Swift | https://github.com/csync/csync-swift | Apache 2.0 | master | Swift SDK for CSync|  |  |
+| Csync-Swift | https://github.com/csync/csync-swift | Apache 2.0 | 1.4 | Swift SDK for CSync|  |  |
