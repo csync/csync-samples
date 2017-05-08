@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CSYNC_HOST</key>
-	<string></string>
+	<string>localhost</string>
 	<key>CSYNC_PORT</key>
-	<integer>80</integer>
+	<integer>6005</integer>
 	<key>CSYNC_SSL</key>
 	<string>NO</string>
 	<key>CSYNC_DEMO_PROVIDER</key>
