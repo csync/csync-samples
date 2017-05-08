@@ -73,7 +73,7 @@ class ChatViewController: UIViewController {
 		//Start listening for data
 		if shouldGoBack{
 			appDelegate.showSplitVC()
-			return;
+			return
 		}
 		roomViewModel.startListening()
 
@@ -88,6 +88,7 @@ class ChatViewController: UIViewController {
 
 	override func viewWillDisappear(_ animated: Bool) {
 		roomViewModel.stopListening()
+        NotificationCenter.default.removeObserver(self)
 	}
 
 	// MARK: - Private Functions
