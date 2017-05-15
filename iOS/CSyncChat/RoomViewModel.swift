@@ -96,8 +96,8 @@ class RoomViewModel {
 
 	func send(_ message: Message){
 		cSyncDataManager.add(message)
-		messages.append(message)
-		messageCompletionHandler?()
+		//messages.append(message)
+		//messageCompletionHandler?()
 	}
 
 	// MARK: - Room Functions

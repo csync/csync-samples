@@ -21,6 +21,8 @@ struct Config {let host: String; let port: Int; let authenticationProvider: Stri
 
 class CSyncDataManager {
 
+	let language = "es"
+	let writeLanguage = "es"
 	static var sharedInstance=CSyncDataManager.init()
 
 	//CSync App
@@ -98,6 +100,9 @@ class CSyncDataManager {
 	func startListeningForRoomListChanges(callback: @escaping (Room, Bool) -> ()){
 		roomListCompletionHandler = callback
 		roomListKey.listen(roomsListener)
+		//cSyncApp.key("rooms.*.*.*").delete()
+		//cSyncApp.key("rooms.*.*").delete()
+		//cSyncApp.key("rooms.*").delete()
 
 	}
 
@@ -111,7 +116,7 @@ class CSyncDataManager {
 	func startListeningForMessages(onChatRoom room: Room, callback: @escaping (Message) -> ()){
 		messagesCompletionHandler = callback
 		messagesKey?.unlisten()
-		messagesKey = cSyncApp.key("rooms." + room.roomId + ".*")
+		messagesKey = cSyncApp.key("rooms." + room.roomId + ".*." + language)
 		messagesKey?.listen(messageListener)
 	}
 
@@ -149,11 +154,10 @@ class CSyncDataManager {
 
 	func add(_ message: Message){
 		//room key looks like roooms.roomId.*, create a child under it for our message in the form: rooms.roomId.messageID
-        guard let messagesKey = self.messagesKey else { return }
-		let keyToBeAdded = messagesKey.parent.child(message.messageId)
-		keyToBeAdded.write(message.value, with: ACL.PublicRead) { (key, error) -> () in
-			if let error = error {
-				print("write for key \(messagesKey.key) failed: \(error)")
+		let keyToBeAdded = self.messagesKey?.parent.parent.child(message.messageId).child(writeLanguage)
+		keyToBeAdded?.write(message.value, with: ACL.PublicRead) { (key, error) -> () in
+			if error != nil {
+				print("write for key \(self.messagesKey?.key) failed: \(error)")
 			}
 		}
 	}
@@ -192,6 +196,7 @@ class CSyncDataManager {
 			print("listener got nil value")
 			return
 		}
+		print("got a room: " + roomData.key.lastComponent()!)
 		let roomId = roomData.key.lastComponent()
 		let room = Room.init(roomId: roomId!, roomName: roomData.data ?? "", isPrivate: roomData.acl == ACL.Private.id, allowUpdate: (roomData.creator == cSyncApp.authData?.uid))
 		roomListCompletionHandler?(room, roomData.exists)
@@ -231,7 +236,7 @@ class CSyncDataManager {
 			return
 		}
 
-		if let messageId = messageData!.key.lastComponent(),
+		if let messageId = messageData!.key.components().dropLast().last,
 			let msgData = messageData!.data,
 			let message = Message(messageId: messageId, message: msgData){
 			messagesCompletionHandler?(message)
