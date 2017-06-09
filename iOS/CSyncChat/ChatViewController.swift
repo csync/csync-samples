@@ -96,6 +96,9 @@ class ChatViewController: UIViewController {
 	//Refreshes the view with new data
 	private func updateView(){
 		self.tableView.reloadData()
+        if roomViewModel.numberOfMessages > 0 && numberOfSections > 0 {
+            tableView.scrollToRow(at: IndexPath(row: roomViewModel.numberOfMessages - 1, section: numberOfSections - 1), at: .bottom, animated: true)
+        }
 	}
 
 	// MARK: - Segues
@@ -132,7 +135,11 @@ class ChatViewController: UIViewController {
             let animationDuration = keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber,
             let animationCurve = keyboardInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber else {return}
         
-        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0, options: UIViewAnimationOptions(rawValue: animationCurve.uintValue << 16), animations: {self.messageEntryBottomConstraint.constant = 0} , completion: nil)
+        UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0, options: UIViewAnimationOptions(rawValue: animationCurve.uintValue << 16), animations: {self.messageEntryBottomConstraint.constant = 0}) {_ in
+                if self.roomViewModel.numberOfMessages > 0 && self.numberOfSections > 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.roomViewModel.numberOfMessages - 1, section: self.numberOfSections - 1), at: .bottom, animated: true)
+                }
+            }
     }
 }
 extension ChatViewController : UITextFieldDelegate{
@@ -148,7 +155,6 @@ extension ChatViewController : UITextFieldDelegate{
 			let message = Message(message: messageText) {
 			//send message
 			roomViewModel.send(message)
-			self.tableView.scrollToNearestSelectedRow(at: .bottom, animated: false)
 			textField.text = ""
 		}
 	}
@@ -190,6 +196,7 @@ extension ChatViewController : UITableViewDataSource, UITableViewDelegate {
 		cell.msgHeader.attributedText = msgHeader
 		cell.msgText.text = message.message
 		cell.msgText.textContainer.lineBreakMode = .byWordWrapping
+        cell.selectionStyle = .none
 		return cell
 	}
 
